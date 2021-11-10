@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragments">
+
+    <fragment
+        android:id="@+id/mainFragments"
+        android:name="com.example.includesallideas.mainFragments"
+        android:label="fragment_main_fragments"
+        tools:layout="@layout/fragment_main_fragments" >
+        <action
+            android:id="@+id/action_mainFragments_to_addNewFragment2"
+            app:destination="@id/addNewFragment" />
+        <action
+            android:id="@+id/action_mainFragments_to_updateDeleteFragments"
+            app:destination="@id/updateDeleteFragments" />
+        <action
+            android:id="@+id/action_mainFragments_to_favoriteFragments"
+            app:destination="@id/favoriteFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewFragment"
+        android:name="com.example.includesallideas.AddNewFragment"
+        android:label="fragment_add_new"
+        tools:layout="@layout/fragment_add_new" >
+        <action
+            android:id="@+id/action_addNewFragment_to_mainFragments"
+            app:destination="@id/mainFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateDeleteFragments"
+        android:name="com.example.includesallideas.UpdateDeleteFragments"
+        android:label="fragment_update_delete_fragments"
+        tools:layout="@layout/fragment_update_delete_fragments" >
+        <action
+            android:id="@+id/action_updateDeleteFragments_to_mainFragments"
+            app:destination="@id/mainFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragments"
+        android:name="com.example.includesallideas.FavoriteFragments"
+        android:label="fragment_favorite_fragments"
+        tools:layout="@layout/fragment_favorite_fragments" >
+        <action
+            android:id="@+id/action_favoriteFragments_to_mainFragments2"
+            app:destination="@id/mainFragments" />
+    </fragment>
+</navigation>
